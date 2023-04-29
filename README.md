@@ -12,9 +12,11 @@ pip install -r requirements.txt
 ```
 
 ## Database: MySQL
+```sql
 password: psw123 \
-port: 6603:3306
-
+port: 6603:3306 \
+database: PHONES
+```
 ## Docker
 For first time run
 ```docker
