@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```
 
 ## Database: MySQL
-password: psw123
+password: psw123 \
 port: 6603:3306
 
 ## Docker
@@ -21,8 +21,16 @@ For first time run
 docker-compose up --build
 ```
 
-Data crawled will be inject into MySQL database 
-
-Everything is hosted on docker
-
-For first run: docker-compose up --build
+Before running on local, remember to host database first
+```sql
+HOST=localhost
+PASSWORD=psw123
+PORT=6603
+DATABASE=PHONES
+```
+Run on Home folder
+```bash
+.venv\Scripts\active
+cd Home
+python app.py
+```
