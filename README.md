@@ -1,4 +1,4 @@
-# chotot-crawling-website
+# chotot-phone-crawling-website
 Simple project to crawl phone data from shops on chotot.com webstite
 
 ## Installation
@@ -11,7 +11,15 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## 
+## Database: MySQL
+password: psw123
+port: 6603:3306
+
+## Docker
+For first time run
+```docker
+docker-compose up --build
+```
 
 Data crawled will be inject into MySQL database 
 
