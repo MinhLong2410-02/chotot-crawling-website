@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - "6603:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: psw123
+      MYSQL_DATABASE: "PHONES"
+    networks:
+      - localhost
+
+  crawl:
+    container_name: crawl
+    build: ./crawl
+    ports:
+      - "8001:9001"
+    networks:
+      - localhost
+
+  mysql_api:
+    container_name: mysql_api
+    build: ./mysql_api
+    ports:
+      - "8002:9002"
+    networks:
+      - localhost
+  
+  home:
+    container_name: home
+    build: ./home
+    ports:
+      - "8000:8000"
+    networks:
+      - localhost
+
+networks:
+  localhost:
+    driver: bridge
